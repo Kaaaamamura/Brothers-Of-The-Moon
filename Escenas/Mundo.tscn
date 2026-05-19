@@ -114,9 +114,6 @@ limit_top = -7200
 limit_right = 2800
 limit_bottom = 350
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1567351186]
-stream = ExtResource("10_i8y4t")
-
 [node name="Botones" type="Node2D" parent="." unique_id=1919594293]
 
 [node name="Boton" parent="Botones" unique_id=758469224 groups=["Botones"] instance=ExtResource("11_mbule")]

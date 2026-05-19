@@ -2,7 +2,7 @@ extends Node2D
 
 var player = null
 
-@onready var music: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var music: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready() -> void:
 	if Global.currentPlayer != null:
@@ -30,6 +30,7 @@ func _ready() -> void:
 	for plataforma in get_tree().get_nodes_in_group("plataformas_mobiles"):
 		plataforma.set_process(false)
 
+	music.stream.loop = true
 	music.play()
 
 func _on_momentary_pressed() -> void:
@@ -49,3 +50,7 @@ func _on_muerte(body: Node2D) -> void:
 func _on_toggle(active: bool) -> void:
 	for plataforma in get_tree().get_nodes_in_group("plataformas_mobiles"):
 		plataforma.set_process(active)
+		
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("restart"):
+		get_tree().call_deferred("reload_current_scene")
