@@ -5,6 +5,7 @@ const JUMP = -600.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var spawn_position: Vector2
+@onready var Jump = "res://Music/SFX/Player/Salto1.mp3"
 
 func _ready() -> void:
 	spawn_position = global_position
@@ -28,6 +29,7 @@ func _physics_process(delta: float) -> void:
 	# Animaciones
 	if not is_on_floor():
 		$AnimatedSprite2D.play("Saltar")
+		Jump.play()
 	elif direction != 0:
 		$AnimatedSprite2D.play("Correr")
 	else:

@@ -137,3 +137,6 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_3onjs")
 animation = &"Saltar"
 autoplay = "default"
+
+[node name="SonidoSalto" type="AudioStreamPlayer" parent="." unique_id=474304597]
+bus = &"Efectos"

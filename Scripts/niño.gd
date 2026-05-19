@@ -5,6 +5,7 @@ const JUMP = -500.
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var spawn_position: Vector2
+@onready var Salto: AudioStreamPlayer = $SonidoSalto
 
 func _ready() -> void:
 	spawn_position = global_position
@@ -24,6 +25,7 @@ func _physics_process(delta: float) -> void:
 	# Salto
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP
+		Salto.play()
 
 	# Animaciones
 	if not is_on_floor():

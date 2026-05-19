@@ -139,3 +139,5 @@ sprite_frames = SubResource("SpriteFrames_3onjs")
 animation = &"Correr"
 autoplay = "default"
 frame_progress = 0.5749824
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=314684583]
