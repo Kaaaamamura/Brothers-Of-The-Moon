@@ -13,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://bmylslwnvx8oe" path="res://Sprites Menu/Boton Salir Pressed.png" id="10_wyyr4"]
 [ext_resource type="Texture2D" uid="uid://8voiwa1x5gkf" path="res://Sprites Menu/Boton Salir Hover.png" id="11_iu416"]
 [ext_resource type="Texture2D" uid="uid://bonvnmnrh42pk" path="res://Sprites Menu/Cursor.png" id="13_wyyr4"]
+[ext_resource type="AudioStream" uid="uid://ccp8jnne3yxkh" path="res://Music/SFX/Player/Daño2.mp3" id="14_jlwly"]
+[ext_resource type="AudioStream" uid="uid://bttkmjucmlfwl" path="res://Music/SFX/Player/Salto3.mp3" id="15_y2iby"]
+[ext_resource type="AudioStream" uid="uid://bdtfrdfaynjnq" path="res://Music/SFX/jammy3.mp3" id="16_1r2g7"]
+[ext_resource type="AudioStream" uid="uid://tf8oqg8qnys8" path="res://Music/Backgrounds/Title.mp3" id="17_y2iby"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iu416"]
 
@@ -95,6 +99,18 @@ position = Vector2(73.625, 39.25)
 rotation = -3.0421088
 scale = Vector2(0.400289, 0.3302469)
 texture = ExtResource("13_wyyr4")
+
+[node name="AudioHover" type="AudioStreamPlayer" parent="." unique_id=729262925]
+stream = ExtResource("14_jlwly")
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="." unique_id=69861366]
+stream = ExtResource("15_y2iby")
+
+[node name="AudioExit" type="AudioStreamPlayer" parent="." unique_id=762418649]
+stream = ExtResource("16_1r2g7")
+
+[node name="Title" type="AudioStreamPlayer" parent="." unique_id=1748511959]
+stream = ExtResource("17_y2iby")
 
 [connection signal="pressed" from="Botones/Comenzar" to="." method="_on_comenzar_pressed"]
 [connection signal="pressed" from="Botones/Opciones" to="." method="_on_opciones_pressed"]

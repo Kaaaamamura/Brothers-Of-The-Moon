@@ -7,24 +7,29 @@ extends Control
 ]
 
 @onready var cursor = $Cursor
+@onready var sfx_hover = $AudioHover
+@onready var sfx_click = $AudioClick
+@onready var sfx_exit = $AudioExit
+@onready var musica = $Title
 
 var index = 0
 var can_input = true
 
 
 func _ready():
-
+	musica.stream.loop = true  # que repita
+	musica.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-
-	# Cursor encima de todo
 	cursor.z_index = 100
-
+	
+	# Conectar señales mouse_entered
+	buttons[0].mouse_entered.connect(_on_comenzar_mouse_entered)
+	buttons[1].mouse_entered.connect(_on_opciones_mouse_entered)
+	buttons[2].mouse_entered.connect(_on_salir_mouse_entered)
+	
 	can_input = false
-
 	await get_tree().process_frame
-
 	update_cursor()
-
 	can_input = true
 
 
@@ -47,18 +52,17 @@ func _input(event):
 	if !can_input:
 		return
 
-
 	if event.is_action_pressed("ui_down"):
-
 		index = (index + 1) % buttons.size()
-
+		sfx_hover.play()
 		update_cursor()
+		
 
-	elif event.is_action_pressed("ui_up"):
-
+	if event.is_action_pressed("ui_up"):
 		index = (index - 1 + buttons.size()) % buttons.size()
-
+		sfx_hover.play()
 		update_cursor()
+		
 
 	elif event.is_action_pressed("ui_accept"):
 
@@ -79,18 +83,22 @@ func select_option():
 
 		0:
 			_on_comenzar_pressed()
+			sfx_click.play()
 
 		1:
 			_on_opciones_pressed()
+			sfx_click.play()
 
 		2:
 			_on_salir_pressed()
+			sfx_exit.play()
 
 
 func _on_comenzar_mouse_entered() -> void:
 
 	index = 0
 
+	sfx_hover.play()
 	update_cursor()
 
 
@@ -98,6 +106,7 @@ func _on_opciones_mouse_entered() -> void:
 
 	index = 1
 
+	sfx_hover.play()
 	update_cursor()
 
 
@@ -105,26 +114,26 @@ func _on_salir_mouse_entered() -> void:
 
 	index = 2
 
+	sfx_hover.play()
 	update_cursor()
 
 
 func _on_comenzar_pressed() -> void:
-
 	can_input = false
-
+	sfx_click.play()
+	await sfx_click.finished
 	get_tree().change_scene_to_file("res://Escenas/selector.tscn")
 
 
 
 func _on_opciones_pressed() -> void:
-
+	sfx_click.play()
 	print("Abrir opciones")
 
 
 func _on_salir_pressed() -> void:
 
 	can_input = false
-
-	$AnimationPlayer.play("exit_game")
-
+	sfx_exit.play()
+	await sfx_exit.finished
 	get_tree().quit()
