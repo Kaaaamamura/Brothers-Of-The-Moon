@@ -7,12 +7,14 @@ extends Control
 @onready var cursor = $Cursor
 
 @onready var animation_player = $INTRO
+@onready var musica = $Title
 
 
 var cont: int = 0
 
 func _ready():
-
+	musica.stream.loop = true  # que repita
+	musica.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 	cursor.z_index = 100
