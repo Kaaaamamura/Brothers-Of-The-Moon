@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://c1csuje8gejtw"]
+
+[ext_resource type="Texture2D" uid="uid://bxhq1tu1j60md" path="res://Sprites Menu/Menu.jpeg" id="1_a0ck7"]
+[ext_resource type="Texture2D" uid="uid://qc1et35rpuk7" path="res://Sprites Menu/Titulo Juego.png" id="2_mjm7p"]
+[ext_resource type="Script" uid="uid://b2ksqrmb0vk0k" path="res://Escenas/intro.gd" id="3_mjm7p"]
+[ext_resource type="AudioStream" uid="uid://cw524jv8nh7mw" path="res://Music/Backgrounds/FirstSpace (intro).mp3" id="3_v8bxe"]
+[ext_resource type="Texture2D" uid="uid://b4pr7v3x6hnsg" path="res://Sprites/intro-Sheet-export.png" id="4_xm0pk"]
+[ext_resource type="FontFile" uid="uid://ccj2xsclwyhdr" path="res://Sprites/germania-one/GermaniaOne-Regular.ttf" id="5_mfwe0"]
+
+[sub_resource type="Animation" id="Animation_ye3ca"]
+resource_name = "Intro"
+length = 81.933334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("INTRO/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10.133333, 20.1, 30, 40.133335, 50.066666, 60.066666, 70.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("INTRO/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 10.2, 20.133333, 30, 40.066666, 50.166668, 60.1, 70.23333, 80.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Hace mucho tiempo... existía un lugar donde el cielo y el mar 
+eran la misma cosa. Lo llamaban el Mar de Estrellas.", "Allí vivían dos hermanos. Su hogar era una pequeña barca, 
+mecida por las olas del cielo.", "Juntos habían navegado por mares inconmensurables.", "Con sus redes de luz, recogían el polvo de las estrellas. 
+Era una vida sencilla. Era una vida perfecta.", "Pero una noche... algo distinto cayó en la red. No era una estrella.", "Era una luz que venía de muy lejos. De un lugar al que nunca 
+habían mirado. De la luna", "Tu hermano, curioso como siempre, siguió esa luz hacia arriba. 
+Hacia el espacio", "Pasaron horas. Luego días. Tu hermano no volvió. Y tú...
+ decidiste ir a buscarlo.", "
+Un viaje desde el Mar de Estrellas hasta la luna."]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("INTRO/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 7.996667, 10.061575, 10.266666, 18.2, 20.133333, 20.333334, 27.933332, 30.012733, 30.2, 37.933334, 40.0622, 40.2, 48, 50.03936, 50.233334, 58.033333, 59.971943, 60.233334, 67.933334, 70.04425, 70.4, 78, 80.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("INTRO/Sprite2D2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(77.34229),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("1_a0ck7")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("INTRO/Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 79.95295),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("INTRO/Sprite2D3:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(80.01726),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_mjm7p")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("INTRO/AudioStreamPlayer:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.06666667, 53.766666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_07ec8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("INTRO/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("INTRO/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Hace mucho tiempo... existía un lugar donde el cielo y el mar eran la misma cosa. Lo llamaban el Mar de Estrellas."]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("INTRO/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("INTRO/Sprite2D2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("1_a0ck7")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("INTRO/Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("INTRO/Sprite2D3:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_mjm7p")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("INTRO/AudioStreamPlayer:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6y7gq"]
+_data = {
+&"Intro": SubResource("Animation_ye3ca"),
+&"RESET": SubResource("Animation_07ec8")
+}
+
+[node name="INTRO" type="AnimationPlayer" unique_id=2039102272]
+libraries/ = SubResource("AnimationLibrary_6y7gq")
+script = ExtResource("3_mjm7p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1009498627]
+position = Vector2(572.5, 321.5)
+scale = Vector2(1.1259766, 0.8046398)
+texture = ExtResource("1_a0ck7")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=942500849]
+position = Vector2(578.5, 311)
+scale = Vector2(1.5479084, 1.2581602)
+texture = ExtResource("2_mjm7p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=963764210]
+texture_filter = 1
+position = Vector2(577, 320.49997)
+scale = Vector2(1.8062499, 1.3770833)
+texture = ExtResource("4_xm0pk")
+hframes = 3
+vframes = 3
+
+[node name="Label" type="Label" parent="." unique_id=914854321]
+texture_filter = 1
+offset_left = 147.0
+offset_top = 488.0
+offset_right = 1010.0
+offset_bottom = 573.0
+theme_override_fonts/font = ExtResource("5_mfwe0")
+theme_override_font_sizes/font_size = 35
+text = "
+Un viaje desde el Mar de Estrellas hasta la luna."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1003144997]
+stream = ExtResource("3_v8bxe")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

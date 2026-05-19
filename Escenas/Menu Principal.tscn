@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cpiwu64reto2k"]
+
+[ext_resource type="Texture2D" uid="uid://ciwflcdxdwedt" path="res://Sprites Menu/Fondo Menu Juego.png" id="1_s1jb3"]
+[ext_resource type="Script" uid="uid://kjp1joefje5" path="res://menu_principal.gd" id="1_tx0d1"]
+[ext_resource type="Texture2D" uid="uid://qc1et35rpuk7" path="res://Sprites Menu/Titulo Juego.png" id="2_q6txd"]
+[ext_resource type="Texture2D" uid="uid://4fjdnsgnlf0a" path="res://Sprites Menu/Boton Comenzar Normal.png" id="3_uw8x7"]
+[ext_resource type="Texture2D" uid="uid://tipve740xha1" path="res://Sprites Menu/Boton Comenzar Pressed.png" id="4_tfslj"]
+[ext_resource type="Texture2D" uid="uid://bjhvlk0s1q8ke" path="res://Sprites Menu/Boton Comenzar Hover.png" id="4_txqcv"]
+[ext_resource type="Texture2D" uid="uid://c1x531rdempux" path="res://Sprites Menu/Boton Salir Normal.png" id="6_4ml2j"]
+[ext_resource type="Texture2D" uid="uid://sfwnlq8mctwi" path="res://Sprites Menu/Boton Opciones Pressed.png" id="7_2ict8"]
+[ext_resource type="Texture2D" uid="uid://ujqs8te1j5nh" path="res://Sprites Menu/Boton Opciones Normal.png" id="7_tx0d1"]
+[ext_resource type="Texture2D" uid="uid://s6sor7qu26jn" path="res://Sprites Menu/Boton Opciones Hover.png" id="8_tx0d1"]
+[ext_resource type="Texture2D" uid="uid://bmylslwnvx8oe" path="res://Sprites Menu/Boton Salir Pressed.png" id="10_wyyr4"]
+[ext_resource type="Texture2D" uid="uid://8voiwa1x5gkf" path="res://Sprites Menu/Boton Salir Hover.png" id="11_iu416"]
+[ext_resource type="Texture2D" uid="uid://bonvnmnrh42pk" path="res://Sprites Menu/Cursor.png" id="13_wyyr4"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iu416"]
+
+[node name="MenuPrincipal" type="Control" unique_id=830453257]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx0d1")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=2143220303]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_s1jb3")
+expand_mode = 1
+
+[node name="Titulo" type="TextureRect" parent="." unique_id=460406017]
+texture_filter = 1
+layout_mode = 0
+offset_left = 410.0
+offset_top = 156.0
+offset_right = 730.0
+offset_bottom = 301.0
+texture = ExtResource("2_q6txd")
+expand_mode = 1
+
+[node name="Botones" type="VBoxContainer" parent="." unique_id=624656112]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.9999999
+offset_top = 363.99994
+offset_right = -665.71436
+offset_bottom = 124.57135
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+alignment = 1
+
+[node name="Comenzar" type="TextureButton" parent="Botones" unique_id=2121692728]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("3_uw8x7")
+texture_pressed = ExtResource("4_tfslj")
+texture_hover = ExtResource("4_txqcv")
+stretch_mode = 3
+
+[node name="Opciones" type="TextureButton" parent="Botones" unique_id=1735005628]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("7_tx0d1")
+texture_pressed = ExtResource("7_2ict8")
+texture_hover = ExtResource("8_tx0d1")
+stretch_mode = 3
+
+[node name="Salir" type="TextureButton" parent="Botones" unique_id=27659013]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_4ml2j")
+texture_pressed = ExtResource("10_wyyr4")
+texture_hover = ExtResource("11_iu416")
+stretch_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2027506977]
+libraries/ = SubResource("AnimationLibrary_iu416")
+
+[node name="Cursor" type="Sprite2D" parent="." unique_id=148226792]
+texture_filter = 1
+position = Vector2(73.625, 39.25)
+rotation = -3.0421088
+scale = Vector2(0.400289, 0.3302469)
+texture = ExtResource("13_wyyr4")
+
+[connection signal="pressed" from="Botones/Comenzar" to="." method="_on_comenzar_pressed"]
+[connection signal="pressed" from="Botones/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Botones/Salir" to="." method="_on_salir_pressed"]

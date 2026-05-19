@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brsb43oawl6rc"
+path="res://.godot/imported/CVaAlien .mp3-4f841e37aad61449bc9f28ab6db9e440.mp3str"
+
+[deps]
+
+source_file="res://Music/SFX/Enemies/CVaAlien .mp3"
+dest_files=["res://.godot/imported/CVaAlien .mp3-4f841e37aad61449bc9f28ab6db9e440.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

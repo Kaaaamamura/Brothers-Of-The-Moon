@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cw524jv8nh7mw"
+path="res://.godot/imported/FirstSpace (intro).mp3-f7f6dbba7b2be5201892af3f705c5f12.mp3str"
+
+[deps]
+
+source_file="res://Music/Backgrounds/FirstSpace (intro).mp3"
+dest_files=["res://.godot/imported/FirstSpace (intro).mp3-f7f6dbba7b2be5201892af3f705c5f12.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

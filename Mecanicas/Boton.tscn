@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cqhgcjvxd0nru"]
+
+[ext_resource type="Script" uid="uid://djifepuhshq2p" path="res://Scripts/boton.gd" id="1_xhd70"]
+[ext_resource type="Texture2D" uid="uid://c2w48nt0l5fq4" path="res://Sprites/Boton.png" id="2_7apcy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rli0l"]
+size = Vector2(49, 24)
+
+[node name="Boton" type="Area2D" unique_id=758469224]
+script = ExtResource("1_xhd70")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=747251410]
+position = Vector2(0.5, 12)
+shape = SubResource("RectangleShape2D_rli0l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=149994313]
+texture_filter = 1
+texture = ExtResource("2_7apcy")

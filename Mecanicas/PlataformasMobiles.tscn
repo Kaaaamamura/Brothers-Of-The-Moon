@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b7m2l8rh4k0dk"]
+
+[ext_resource type="Script" uid="uid://bo7lopo0osfhx" path="res://Scripts/PlataformasMobiles.gd" id="1_u8nq2"]
+[ext_resource type="Texture2D" uid="uid://b0lxcj1nu3spr" path="res://Sprites/Plataforma Movil.png" id="2_u8nq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nq2"]
+size = Vector2(232, 20)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=1434075845]
+script = ExtResource("1_u8nq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1808805323]
+shape = SubResource("RectangleShape2D_u8nq2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=198804346]
+texture_filter = 1
+position = Vector2(9.500016, 1.0000007)
+scale = Vector2(1.4427085, 0.34375)
+texture = ExtResource("2_u8nq2")
+
+[node name="PuntoA" type="Marker2D" parent="." unique_id=565907945]
+position = Vector2(0, 16)
+
+[node name="PuntoB" type="Marker2D" parent="." unique_id=195596448]
+position = Vector2(0, -144)

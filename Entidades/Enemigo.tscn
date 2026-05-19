@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bigml1fkycn3"]
+
+[ext_resource type="Script" uid="uid://dvgb5ha4mtvs4" path="res://Scripts/Enemigo.gd" id="1_t3uwf"]
+[ext_resource type="Texture2D" uid="uid://dmpxrh25yngvv" path="res://icon.svg" id="2_yyfm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi2iw"]
+size = Vector2(162, 146)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_th7r6"]
+radius = 200.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hot64"]
+size = Vector2(186, 159.25)
+
+[node name="EnemigoBasico" type="CharacterBody2D" unique_id=164729677]
+script = ExtResource("1_t3uwf")
+
+[node name="FormaCuerpo" type="CollisionShape2D" parent="." unique_id=1232260559]
+shape = SubResource("RectangleShape2D_oi2iw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2061671889]
+texture = ExtResource("2_yyfm4")
+
+[node name="AreaDeteccion" type="Area2D" parent="." unique_id=397710972]
+
+[node name="ColisionDeteccion" type="CollisionShape2D" parent="AreaDeteccion" unique_id=1535906329]
+shape = SubResource("CircleShape2D_th7r6")
+
+[node name="AreaDanio" type="Area2D" parent="." unique_id=1254889648]
+
+[node name="ColisionDanio" type="CollisionShape2D" parent="AreaDanio" unique_id=1537535900]
+shape = SubResource("RectangleShape2D_hot64")

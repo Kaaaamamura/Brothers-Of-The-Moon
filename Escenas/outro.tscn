@@ -1,0 +1,370 @@
+[gd_scene format=3 uid="uid://iwwpa7bwc7pv"]
+
+[ext_resource type="Texture2D" uid="uid://bxhq1tu1j60md" path="res://Sprites Menu/Menu.jpeg" id="1_nn4rd"]
+[ext_resource type="Texture2D" uid="uid://qc1et35rpuk7" path="res://Sprites Menu/Titulo Juego.png" id="2_rkm4t"]
+[ext_resource type="Texture2D" uid="uid://cmaf58tfrbi4a" path="res://Sprites/Outro.png" id="3_nn4rd"]
+[ext_resource type="FontFile" uid="uid://ccj2xsclwyhdr" path="res://Sprites/germania-one/GermaniaOne-Regular.ttf" id="4_fsyqn"]
+[ext_resource type="AudioStream" uid="uid://cglrd2nk6eg0d" path="res://Music/Backgrounds/FinalSpace (outro).mp3" id="5_rkm4t"]
+
+[sub_resource type="Animation" id="Animation_ye3ca"]
+resource_name = "Intro"
+length = 91.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OUTRO/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 10.133333, 20.1, 30, 40.133335, 50.066666, 60.066666, 70.1, 80.066666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OUTRO/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 7.996667, 10.061575, 10.266666, 18.2, 20.133333, 20.333334, 27.933332, 30.012733, 30.2, 37.933334, 40.0622, 40.2, 48, 50.03936, 50.233334, 58.033333, 59.971943, 60.233334, 67.933334, 70.04425, 70.4, 78, 80.1, 80.23989, 88.02256),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OUTRO/Sprite2D2:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(77.34229),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("1_nn4rd")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OUTRO/Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 88.333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OUTRO/Sprite2D3:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(80.01726),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rkm4t")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OUTRO/AudioStreamPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.06666667, 53.766666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OUTRO/Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10.104573, 20.16615, 30.05573, 40.09969, 50.137062, 60.02664, 70.04522, 80.067894),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Luna completamente oscura. La gema es la única fuente de luz. 
+El alien la sostiene.", "El alien te confronta desconfiado, apretando la gema. 
+Eres una intrusa en su luna.", "Tu hermano aparece detrás del alien, sano y salvo. 
+Estaba perdido, no atrapado.", "El alien los mira a los dos. Luego mira la gema. 
+Luego el cielo oscuro. Algo entiende.", "Abres tu red de luz y empiezas a esparcir 
+polvo de estrellas sobre la superficie.", "Los tres juntos cubren la luna de escarcha. 
+Primer destello. Luego otro.", "El alien suelta la gema, feliz. Ya no la necesita:
+la luna tiene su propia luz.", "La luna brilla completamente. Los tres trazan un arco 
+de escarcha sobre ella.", "Los hermanos navegan de regreso al Mar de Estrellas. 
+Arriba, la luna brilla de vuelta."]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OUTRO/Label:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 88.15156),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_cum8b"]
+resource_name = "Outro"
+length = 91.833336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OUTRO/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 10.133333, 20.1, 30, 40.133335, 50.066666, 60.066666, 70.1, 80.066666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OUTRO/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 7.996667, 10.061575, 10.266666, 18.2, 20.133333, 20.333334, 27.933332, 30.012733, 30.2, 37.933334, 40.0622, 40.2, 48, 50.03936, 50.233334, 58.033333, 59.971943, 60.233334, 67.933334, 70.04425, 70.4, 78, 80.1, 80.23989, 88.02256),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OUTRO/Sprite2D2:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(77.34229),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("1_nn4rd")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OUTRO/Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 88.333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OUTRO/Sprite2D3:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(80.01726),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rkm4t")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OUTRO/AudioStreamPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.06666667, 53.766666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OUTRO/Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10.104573, 20.16615, 30.05573, 40.09969, 50.137062, 60.02664, 70.04522, 80.067894),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Luna completamente oscura. La gema es la única fuente de luz. 
+El alien la sostiene.", "El alien te confronta desconfiado, apretando la gema. 
+Eres una intrusa en su luna.", "Tu hermano aparece detrás del alien, sano y salvo. 
+Estaba perdido, no atrapado.", "El alien los mira a los dos. Luego mira la gema. 
+Luego el cielo oscuro. Algo entiende.", "Abres tu red de luz y empiezas a esparcir 
+polvo de estrellas sobre la superficie.", "Los tres juntos cubren la luna de escarcha. 
+Primer destello. Luego otro.", "El alien suelta la gema, feliz. Ya no la necesita:
+la luna tiene su propia luz.", "La luna brilla completamente. Los tres trazan un arco 
+de escarcha sobre ella.", "Los hermanos navegan de regreso al Mar de Estrellas. 
+Arriba, la luna brilla de vuelta."]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OUTRO/Label:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 88.15156),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_07ec8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OUTRO/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OUTRO/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OUTRO/Sprite2D2:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("1_nn4rd")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OUTRO/Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OUTRO/Sprite2D3:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rkm4t")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OUTRO/AudioStreamPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OUTRO/Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Luna completamente oscura. La gema es la única fuente de luz. El alien la sostiene."]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OUTRO/Label:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6y7gq"]
+_data = {
+&"Intro": SubResource("Animation_ye3ca"),
+&"Outro": SubResource("Animation_cum8b"),
+&"RESET": SubResource("Animation_07ec8")
+}
+
+[node name="OUTRO" type="AnimationPlayer" unique_id=2039102272]
+libraries/ = SubResource("AnimationLibrary_6y7gq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1009498627]
+position = Vector2(572.5, 321.5)
+scale = Vector2(1.1259766, 0.8046398)
+texture = ExtResource("1_nn4rd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=942500849]
+position = Vector2(578.5, 311)
+scale = Vector2(1.5479084, 1.2581602)
+texture = ExtResource("2_rkm4t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=963764210]
+visible = false
+texture_filter = 1
+position = Vector2(578.5, 324.00003)
+scale = Vector2(3.5968752, 2.7416668)
+texture = ExtResource("3_nn4rd")
+hframes = 3
+vframes = 4
+frame = 8
+
+[node name="Label" type="Label" parent="." unique_id=914854321]
+visible = false
+texture_filter = 1
+offset_left = 135.0
+offset_top = 42.0
+offset_right = 998.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("4_fsyqn")
+theme_override_font_sizes/font_size = 35
+text = "Los hermanos navegan de regreso al Mar de Estrellas. 
+Arriba, la luna brilla de vuelta."
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1003144997]
+stream = ExtResource("5_rkm4t")

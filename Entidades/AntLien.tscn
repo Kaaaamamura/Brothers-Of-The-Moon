@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bn324lojtrvf0"]
+
+[ext_resource type="Script" uid="uid://dvgb5ha4mtvs4" path="res://Scripts/Enemigo.gd" id="1_tdpnp"]
+[ext_resource type="Texture2D" uid="uid://ceu4ky5y21ywi" path="res://Sprites/Enemigos.png" id="2_tdpnp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi2iw"]
+size = Vector2(50, 49)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_th7r6"]
+radius = 200.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hot64"]
+size = Vector2(63, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_680t7"]
+atlas = ExtResource("2_tdpnp")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3pkd"]
+atlas = ExtResource("2_tdpnp")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw3j2"]
+atlas = ExtResource("2_tdpnp")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc415"]
+atlas = ExtResource("2_tdpnp")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc0oy"]
+atlas = ExtResource("2_tdpnp")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2r0d"]
+atlas = ExtResource("2_tdpnp")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kdmma"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_680t7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3pkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw3j2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc415")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc0oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2r0d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AntLien" type="CharacterBody2D" unique_id=164729677]
+script = ExtResource("1_tdpnp")
+
+[node name="FormaCuerpo" type="CollisionShape2D" parent="." unique_id=1232260559]
+visible = false
+shape = SubResource("RectangleShape2D_oi2iw")
+
+[node name="AreaDeteccion" type="Area2D" parent="." unique_id=397710972]
+visible = false
+
+[node name="ColisionDeteccion" type="CollisionShape2D" parent="AreaDeteccion" unique_id=1535906329]
+visible = false
+shape = SubResource("CircleShape2D_th7r6")
+
+[node name="AreaDanio" type="Area2D" parent="." unique_id=1254889648]
+visible = false
+
+[node name="ColisionDanio" type="CollisionShape2D" parent="AreaDanio" unique_id=1537535900]
+visible = false
+shape = SubResource("RectangleShape2D_hot64")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=825058337]
+texture_filter = 1
+position = Vector2(0, -5)
+scale = Vector2(1.046875, 0.96875)
+sprite_frames = SubResource("SpriteFrames_kdmma")
+autoplay = "default"
+frame_progress = 0.7890076

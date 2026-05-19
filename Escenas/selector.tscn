@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bdd14g86f7u1d"]
+
+[ext_resource type="Script" uid="uid://cfgi55p8nh7bb" path="res://selector.gd" id="1_6s2yc"]
+[ext_resource type="Texture2D" uid="uid://bxhq1tu1j60md" path="res://Sprites Menu/Menu.jpeg" id="2_2tphv"]
+[ext_resource type="Texture2D" uid="uid://bha0v2nqauxqy" path="res://Sprites Menu/Niño.png" id="2_bbmno"]
+[ext_resource type="PackedScene" uid="uid://cyllka7bb1hko" path="res://Entidades/Niño.tscn" id="3_1wow0"]
+[ext_resource type="Script" uid="uid://cmr11kfcbrcjf" path="res://Escenas/CharacterData.gd" id="3_bbmno"]
+[ext_resource type="Texture2D" uid="uid://xm073xml7w5k" path="res://Sprites Menu/Niña.png" id="4_1wow0"]
+[ext_resource type="PackedScene" uid="uid://eilsj03bufmc" path="res://Entidades/Niña.tscn" id="6_1ykjd"]
+[ext_resource type="Texture2D" uid="uid://bonvnmnrh42pk" path="res://Sprites Menu/Cursor.png" id="8_1ykjd"]
+
+[sub_resource type="Resource" id="Resource_1ykjd"]
+script = ExtResource("3_bbmno")
+Key = "Niño"
+Imagen = ExtResource("2_bbmno")
+Scene = ExtResource("3_1wow0")
+metadata/_custom_type_script = "uid://cmr11kfcbrcjf"
+
+[sub_resource type="Resource" id="Resource_cq3xg"]
+script = ExtResource("3_bbmno")
+Key = "Niña"
+Imagen = ExtResource("4_1wow0")
+Scene = ExtResource("6_1ykjd")
+metadata/_custom_type_script = "uid://cmr11kfcbrcjf"
+
+[node name="Selector" type="Control" unique_id=590150261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6s2yc")
+Personajes = Array[ExtResource("3_bbmno")]([SubResource("Resource_1ykjd"), SubResource("Resource_cq3xg")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=244413690]
+position = Vector2(571.00006, 398)
+scale = Vector2(1.1484376, 1)
+texture = ExtResource("2_2tphv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1807223421]
+texture_filter = 1
+position = Vector2(564, 308)
+scale = Vector2(6.34375, 6.125)
+texture = ExtResource("2_bbmno")
+hframes = 6
+vframes = 3
+
+[node name="Siguiente" type="Button" parent="." unique_id=518828656]
+texture_filter = 1
+layout_mode = 0
+offset_left = 779.0
+offset_top = 327.0
+offset_right = 815.0
+offset_bottom = 358.0
+text = ">"
+
+[node name="Seleccionar" type="Button" parent="." unique_id=286544732]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 530.0
+offset_right = 642.0
+offset_bottom = 561.0
+text = "Seleccionar"
+
+[node name="Anterior" type="Button" parent="." unique_id=523249370]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 323.0
+offset_right = 372.0
+offset_bottom = 354.0
+text = "<"
+
+[node name="Cursor" type="Sprite2D" parent="." unique_id=2071417519]
+texture_filter = 1
+position = Vector2(36, 27)
+rotation = -3.0421088
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_1ykjd")
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Seleccionar" to="." method="_on_seleccionar_pressed"]
+[connection signal="pressed" from="Anterior" to="." method="_on_anterior_pressed"]

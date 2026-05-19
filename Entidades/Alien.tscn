@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://b8krgmvyfsi5e"]
+
+[ext_resource type="Script" uid="uid://dvgb5ha4mtvs4" path="res://Scripts/Enemigo.gd" id="1_jlm0l"]
+[ext_resource type="Texture2D" uid="uid://ceu4ky5y21ywi" path="res://Sprites/Enemigos.png" id="2_jlm0l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi2iw"]
+size = Vector2(75, 70)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_th7r6"]
+radius = 200.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hot64"]
+size = Vector2(92, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul7mj"]
+atlas = ExtResource("2_jlm0l")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ebfl"]
+atlas = ExtResource("2_jlm0l")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akpt6"]
+atlas = ExtResource("2_jlm0l")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atbq8"]
+atlas = ExtResource("2_jlm0l")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2myuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul7mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ebfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akpt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atbq8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Alien" type="CharacterBody2D" unique_id=164729677]
+script = ExtResource("1_jlm0l")
+
+[node name="FormaCuerpo" type="CollisionShape2D" parent="." unique_id=1232260559]
+visible = false
+shape = SubResource("RectangleShape2D_oi2iw")
+
+[node name="AreaDeteccion" type="Area2D" parent="." unique_id=397710972]
+visible = false
+
+[node name="ColisionDeteccion" type="CollisionShape2D" parent="AreaDeteccion" unique_id=1535906329]
+visible = false
+shape = SubResource("CircleShape2D_th7r6")
+
+[node name="AreaDanio" type="Area2D" parent="." unique_id=1254889648]
+visible = false
+
+[node name="ColisionDanio" type="CollisionShape2D" parent="AreaDanio" unique_id=1537535900]
+visible = false
+shape = SubResource("RectangleShape2D_hot64")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=881492036]
+texture_filter = 1
+scale = Vector2(1.140625, 1.1357422)
+sprite_frames = SubResource("SpriteFrames_2myuj")
+autoplay = "default"
+frame_progress = 0.07671863

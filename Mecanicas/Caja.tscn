@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cfvfthjep7qjf"]
+
+[ext_resource type="Texture2D" uid="uid://ba0ukfb83572l" path="res://Sprites/CajaFrente.png" id="1_so1ge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so1ge"]
+size = Vector2(31, 29)
+
+[node name="Caja" type="RigidBody2D" unique_id=1414593062]
+mass = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1851936708]
+shape = SubResource("RectangleShape2D_so1ge")
+
+[node name="CajaFrente" type="Sprite2D" parent="." unique_id=544673485]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.5, 0.46875)
+texture = ExtResource("1_so1ge")
