@@ -7,12 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://tipve740xha1" path="res://Sprites Menu/Boton Comenzar Pressed.png" id="4_tfslj"]
 [ext_resource type="Texture2D" uid="uid://bjhvlk0s1q8ke" path="res://Sprites Menu/Boton Comenzar Hover.png" id="4_txqcv"]
 [ext_resource type="Texture2D" uid="uid://c1x531rdempux" path="res://Sprites Menu/Boton Salir Normal.png" id="6_4ml2j"]
-[ext_resource type="Texture2D" uid="uid://sfwnlq8mctwi" path="res://Sprites Menu/Boton Opciones Pressed.png" id="7_2ict8"]
-[ext_resource type="Texture2D" uid="uid://ujqs8te1j5nh" path="res://Sprites Menu/Boton Opciones Normal.png" id="7_tx0d1"]
-[ext_resource type="Texture2D" uid="uid://s6sor7qu26jn" path="res://Sprites Menu/Boton Opciones Hover.png" id="8_tx0d1"]
 [ext_resource type="Texture2D" uid="uid://bmylslwnvx8oe" path="res://Sprites Menu/Boton Salir Pressed.png" id="10_wyyr4"]
 [ext_resource type="Texture2D" uid="uid://8voiwa1x5gkf" path="res://Sprites Menu/Boton Salir Hover.png" id="11_iu416"]
 [ext_resource type="Texture2D" uid="uid://bonvnmnrh42pk" path="res://Sprites Menu/Cursor.png" id="13_wyyr4"]
+[ext_resource type="AudioStream" uid="uid://ccp8jnne3yxkh" path="res://Music/SFX/Player/Daño2.mp3" id="14_jlwly"]
+[ext_resource type="AudioStream" uid="uid://bttkmjucmlfwl" path="res://Music/SFX/Player/Salto3.mp3" id="15_y2iby"]
+[ext_resource type="AudioStream" uid="uid://bdtfrdfaynjnq" path="res://Music/SFX/jammy3.mp3" id="16_1r2g7"]
+[ext_resource type="AudioStream" uid="uid://tf8oqg8qnys8" path="res://Music/Backgrounds/Title.mp3" id="17_y2iby"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iu416"]
 
@@ -70,14 +71,6 @@ texture_pressed = ExtResource("4_tfslj")
 texture_hover = ExtResource("4_txqcv")
 stretch_mode = 3
 
-[node name="Opciones" type="TextureButton" parent="Botones" unique_id=1735005628]
-texture_filter = 1
-layout_mode = 2
-texture_normal = ExtResource("7_tx0d1")
-texture_pressed = ExtResource("7_2ict8")
-texture_hover = ExtResource("8_tx0d1")
-stretch_mode = 3
-
 [node name="Salir" type="TextureButton" parent="Botones" unique_id=27659013]
 texture_filter = 1
 layout_mode = 2
@@ -96,6 +89,17 @@ rotation = -3.0421088
 scale = Vector2(0.400289, 0.3302469)
 texture = ExtResource("13_wyyr4")
 
+[node name="AudioHover" type="AudioStreamPlayer" parent="." unique_id=729262925]
+stream = ExtResource("14_jlwly")
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="." unique_id=69861366]
+stream = ExtResource("15_y2iby")
+
+[node name="AudioExit" type="AudioStreamPlayer" parent="." unique_id=762418649]
+stream = ExtResource("16_1r2g7")
+
+[node name="Title" type="AudioStreamPlayer" parent="." unique_id=1748511959]
+stream = ExtResource("17_y2iby")
+
 [connection signal="pressed" from="Botones/Comenzar" to="." method="_on_comenzar_pressed"]
-[connection signal="pressed" from="Botones/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="Botones/Salir" to="." method="_on_salir_pressed"]

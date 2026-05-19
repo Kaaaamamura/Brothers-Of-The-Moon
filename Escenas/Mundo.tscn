@@ -122,8 +122,12 @@ stream = ExtResource("10_i8y4t")
 [node name="Boton" parent="Botones" unique_id=758469224 groups=["Botones"] instance=ExtResource("11_mbule")]
 position = Vector2(319, -59)
 
-[node name="Boton2" parent="Botones" unique_id=1890441542 groups=["Botones"] instance=ExtResource("11_mbule")]
-position = Vector2(-110, -826)
+[node name="Label" type="Label" parent="." unique_id=270520375]
+offset_left = 2471.0
+offset_top = -6149.0
+offset_right = 2518.0
+offset_bottom = -6126.0
+text = "Enfrentate a mi! (tocame)"
 
 [node name="Palancas" type="Node2D" parent="." unique_id=473823303]
 
@@ -229,17 +233,17 @@ shape = SubResource("WorldBoundaryShape2D_mbule")
 
 [node name="Enemigos" type="Node2D" parent="." unique_id=200746744]
 
-[node name="GataLien4" parent="Enemigos" unique_id=164729677 instance=ExtResource("14_mbule")]
+[node name="GataLien4" parent="Enemigos" unique_id=164729677 groups=["Enemigos"] instance=ExtResource("14_mbule")]
 position = Vector2(2332, -1868)
 
-[node name="AntLien4" parent="Enemigos" unique_id=1667058717 instance=ExtResource("15_i8y4t")]
+[node name="AntLien4" parent="Enemigos" unique_id=1667058717 groups=["Enemigos"] instance=ExtResource("15_i8y4t")]
 position = Vector2(2047, -1883)
 
-[node name="AntLien3" parent="Enemigos" unique_id=5419022 instance=ExtResource("15_i8y4t")]
+[node name="AntLien3" parent="Enemigos" unique_id=5419022 groups=["Enemigos"] instance=ExtResource("15_i8y4t")]
 position = Vector2(2553, -1867)
 
-[node name="GataLien2" parent="Enemigos" unique_id=853333619 instance=ExtResource("14_mbule")]
-position = Vector2(307, -1488)
+[node name="GataLien2" parent="Enemigos" unique_id=853333619 groups=["Enemigos"] instance=ExtResource("14_mbule")]
+position = Vector2(19, -1506)
 
 [node name="GataLien" parent="Enemigos" unique_id=1220856333 groups=["Enemigos"] instance=ExtResource("14_mbule")]
 position = Vector2(1828, -54)
@@ -250,40 +254,37 @@ position = Vector2(429, -830)
 [node name="AntLien2" parent="Enemigos" unique_id=1690741543 groups=["Enemigos"] instance=ExtResource("15_i8y4t")]
 position = Vector2(797, -831)
 
-[node name="GataLien3" parent="Enemigos" unique_id=1525336516 instance=ExtResource("14_mbule")]
-position = Vector2(635, -1482)
+[node name="GataLien3" parent="Enemigos" unique_id=1525336516 groups=["Enemigos"] instance=ExtResource("14_mbule")]
+position = Vector2(408, -1520)
 
-[node name="GataLien5" parent="Enemigos" unique_id=1482012705 instance=ExtResource("14_mbule")]
+[node name="GataLien5" parent="Enemigos" unique_id=1482012705 groups=["Enemigos"] instance=ExtResource("14_mbule")]
 position = Vector2(610, -2686)
 
-[node name="AntLien5" parent="Enemigos" unique_id=1642331208 instance=ExtResource("15_i8y4t")]
+[node name="AntLien5" parent="Enemigos" unique_id=1642331208 groups=["Enemigos"] instance=ExtResource("15_i8y4t")]
 position = Vector2(244, -2688)
 
-[node name="GataLien6" parent="Enemigos" unique_id=999309038 instance=ExtResource("14_mbule")]
+[node name="GataLien6" parent="Enemigos" unique_id=999309038 groups=["Enemigos"] instance=ExtResource("14_mbule")]
 position = Vector2(1187, -2658)
 
-[node name="GataLien7" parent="Enemigos" unique_id=143192010 instance=ExtResource("14_mbule")]
+[node name="GataLien7" parent="Enemigos" unique_id=143192010 groups=["Enemigos"] instance=ExtResource("14_mbule")]
 position = Vector2(481, -4952)
 
-[node name="GataLien8" parent="Enemigos" unique_id=581213377 instance=ExtResource("14_mbule")]
+[node name="GataLien8" parent="Enemigos" unique_id=581213377 groups=["Enemigos"] instance=ExtResource("14_mbule")]
 position = Vector2(-239, -4959)
 
-[node name="AntLien6" parent="Enemigos" unique_id=1925249630 instance=ExtResource("15_i8y4t")]
+[node name="AntLien6" parent="Enemigos" unique_id=1925249630 groups=["Enemigos"] instance=ExtResource("15_i8y4t")]
 position = Vector2(560, -5916)
 
-[node name="AntLien7" parent="Enemigos" unique_id=1657969674 instance=ExtResource("15_i8y4t")]
+[node name="AntLien7" parent="Enemigos" unique_id=1657969674 groups=["Enemigos"] instance=ExtResource("15_i8y4t")]
 position = Vector2(1300, -6220)
 
-[node name="Alien" parent="Enemigos" unique_id=587327571 instance=ExtResource("14_i8y4t")]
-position = Vector2(2576, -6092)
+[node name="Alien" parent="Enemigos" unique_id=587327571 groups=["Enemigos"] instance=ExtResource("14_i8y4t")]
+position = Vector2(2578, -6049)
 
 [node name="Cajas" type="Node2D" parent="." unique_id=256614809]
 
 [node name="Caja" parent="Cajas" unique_id=995132100 groups=["Cajas"] instance=ExtResource("17_kkahe")]
 position = Vector2(108, -111)
-
-[node name="Caja2" parent="Cajas" unique_id=1414593062 groups=["Cajas"] instance=ExtResource("17_kkahe")]
-position = Vector2(9, -822)
 
 [node name="Jammy" type="Sprite2D" parent="." unique_id=997532709]
 position = Vector2(2727, -1838)
