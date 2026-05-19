@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bxhq1tu1j60md" path="res://Sprites Menu/Menu.jpeg" id="1_nn4rd"]
 [ext_resource type="Texture2D" uid="uid://qc1et35rpuk7" path="res://Sprites Menu/Titulo Juego.png" id="2_rkm4t"]
 [ext_resource type="Texture2D" uid="uid://cmaf58tfrbi4a" path="res://Sprites/Outro.png" id="3_nn4rd"]
+[ext_resource type="Script" uid="uid://tsghue830k5x" path="res://Scripts/outro.gd" id="3_rkm4t"]
 [ext_resource type="FontFile" uid="uid://ccj2xsclwyhdr" path="res://Sprites/germania-one/GermaniaOne-Regular.ttf" id="4_fsyqn"]
 [ext_resource type="AudioStream" uid="uid://cglrd2nk6eg0d" path="res://Music/Backgrounds/FinalSpace (outro).mp3" id="5_rkm4t"]
 
@@ -332,6 +333,7 @@ _data = {
 
 [node name="OUTRO" type="AnimationPlayer" unique_id=2039102272]
 libraries/ = SubResource("AnimationLibrary_6y7gq")
+script = ExtResource("3_rkm4t")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1009498627]
 position = Vector2(572.5, 321.5)
@@ -344,7 +346,6 @@ scale = Vector2(1.5479084, 1.2581602)
 texture = ExtResource("2_rkm4t")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=963764210]
-visible = false
 texture_filter = 1
 position = Vector2(578.5, 324.00003)
 scale = Vector2(3.5968752, 2.7416668)
@@ -354,7 +355,6 @@ vframes = 4
 frame = 8
 
 [node name="Label" type="Label" parent="." unique_id=914854321]
-visible = false
 texture_filter = 1
 offset_left = 135.0
 offset_top = 42.0
@@ -362,9 +362,11 @@ offset_right = 998.0
 offset_bottom = 127.0
 theme_override_fonts/font = ExtResource("4_fsyqn")
 theme_override_font_sizes/font_size = 35
-text = "Los hermanos navegan de regreso al Mar de Estrellas. 
-Arriba, la luna brilla de vuelta."
+text = "Luna completamente oscura. La gema es la única fuente de luz. 
+El alien la sostiene."
 horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1003144997]
 stream = ExtResource("5_rkm4t")

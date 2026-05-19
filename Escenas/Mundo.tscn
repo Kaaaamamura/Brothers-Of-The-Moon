@@ -122,8 +122,12 @@ stream = ExtResource("10_i8y4t")
 [node name="Boton" parent="Botones" unique_id=758469224 groups=["Botones"] instance=ExtResource("11_mbule")]
 position = Vector2(319, -59)
 
-[node name="Boton2" parent="Botones" unique_id=1890441542 groups=["Botones"] instance=ExtResource("11_mbule")]
-position = Vector2(-110, -826)
+[node name="Label" type="Label" parent="." unique_id=270520375]
+offset_left = 2471.0
+offset_top = -6149.0
+offset_right = 2518.0
+offset_bottom = -6126.0
+text = "Enfrentate a mi! (tocame)"
 
 [node name="Palancas" type="Node2D" parent="." unique_id=473823303]
 
@@ -270,19 +274,13 @@ position = Vector2(560, -5916)
 [node name="AntLien7" parent="Enemigos" unique_id=1657969674 groups=["Enemigos"] instance=ExtResource("15_i8y4t")]
 position = Vector2(1300, -6220)
 
-[node name="Alien" parent="Enemigos" unique_id=587327571 instance=ExtResource("14_i8y4t")]
-position = Vector2(2576, -6092)
-
-[node name="Alien2" parent="Enemigos" unique_id=751873173 instance=ExtResource("14_i8y4t")]
-position = Vector2(-647, -118)
+[node name="Alien" parent="Enemigos" unique_id=587327571 groups=["Enemigos"] instance=ExtResource("14_i8y4t")]
+position = Vector2(2578, -6049)
 
 [node name="Cajas" type="Node2D" parent="." unique_id=256614809]
 
 [node name="Caja" parent="Cajas" unique_id=995132100 groups=["Cajas"] instance=ExtResource("17_kkahe")]
 position = Vector2(108, -111)
-
-[node name="Caja2" parent="Cajas" unique_id=1414593062 groups=["Cajas"] instance=ExtResource("17_kkahe")]
-position = Vector2(9, -822)
 
 [node name="Jammy" type="Sprite2D" parent="." unique_id=997532709]
 position = Vector2(2727, -1838)
